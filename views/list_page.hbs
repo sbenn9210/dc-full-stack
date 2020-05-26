@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Lists</title>
+  <title>Lists - {{listName}}</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css" integrity="sha256-qS+snwBgqr+iFVpBB58C9UCxKFhyL03YHpZfdNUhSEw=" crossorigin="anonymous" />
@@ -14,13 +14,13 @@
 <body>
 <main class="section">
     <div class="container">
-    <h1 class="title">Lists - {{listName}}</h1>
+    <h1 class="title">Items - {{listName}}</h1>
     <hr>
-    <p>Here are your lists:</p>
+    <p>Here are your items:</p>
     <div class="content">
         <ul>
-        {{#each lists}}
-            <li><a href="/list/{{this.uuid}}">{{this.name}}</a></li>
+        {{#each items}}
+            <li>{{this.description}}</li>
         {{/each}}
         </ul>
     </div>
